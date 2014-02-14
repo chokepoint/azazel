@@ -20,7 +20,7 @@ Azazel is a userland rootkit based off of the original LD_PRELOAD technique from
 * Log cleanup for utmp/wtmp entries based on pty
 
 ### Links
-* [Documentation](http://www.blackhatlibrary.net)
+* [Documentation](http://www.blackhatlibrary.net/Azazel)
 * [Chokepoint](http://www.chokepoint.net)
 
 ### Disclaimer
