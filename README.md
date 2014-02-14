@@ -22,3 +22,6 @@ Azazel is a userland rootkit based off of the original LD_PRELOAD technique from
 ### Links
 * [Documentation](http://www.blackhatlibrary.net)
 * [Chokepoint](http://www.chokepoint.net)
+
+### Disclaimer
+The authors are in no way responsible for any illegal use of this software. It is provided purely as an educational proof of concept. We are also not responsible for any damages or mishaps that may happen in the course of using this software. Use at your own risk.
