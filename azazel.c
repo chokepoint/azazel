@@ -147,7 +147,6 @@ int parse_environ(char *stack, int len, char *needle) {
 		if (*step+1 != '\0') {
 			step++;
 			if (step-stack >= len) {
-				printf("FACK!\n");
 				return 0;
 			}
 		} else
