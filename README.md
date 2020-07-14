@@ -24,8 +24,6 @@ Using netcat to communicate with a remote PTY isn't the best idea. See below for
 > socat -,raw,echo=0 TCP:target:port,bind=:61040
 
 ### Links
-* [Documentation](http://www.blackhatlibrary.net/Azazel)
-* [Chokepoint](http://www.chokepoint.net)
 * [Better PTY Client](https://github.com/infodox/python-pty-shells/blob/master/tcp_pty_shell_handler.py)
 
 ### Disclaimer
